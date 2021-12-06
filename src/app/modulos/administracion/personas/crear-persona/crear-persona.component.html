@@ -1,1 +1,40 @@
-<p>crear-persona works!</p>
+
+<form class="container col s8">
+    <nav><h3 class="brand-logo col s12">Por favor genere su Registro </h3></nav>
+    
+    <form [formGroup]= "fgCreacion" (ngSubmit)="CrearUsuario()" class="container col s10">
+      <div class="col m12 l12">
+        <div class="input-field col s10">
+          <i class="material-icons prefix">contacts</i>
+          <input formControlName="nombre" id="FirstName" type="text" class="validate">
+          <label for="FirstName">NOMBRE</label>
+        </div>
+        <div class="input-field col s10">
+          <i class="material-icons prefix">contacts</i>
+          <input formControlName="apellidos" id="LastName" type="text" class="validate">
+          <label for="LastName">APELLIDOS</label>
+        </div>
+        <div class="input-field col s10">
+          <i class="material-icons prefix">email</i>
+          <input formControlName="correo" id="Email" type="email" class="validate">
+          <label for="Email">CORREO</label>
+        </div>
+          <div class="input-field col s10">
+          <i class="material-icons prefix">smartphone</i>
+          <input formControlName="celular" id="Phone" type="text" class="validate">
+          <label for="Phone">CELULAR</label>
+        </div>
+          <!-- <div class="input-field col s12">
+          <input id="Password" type="password" class="validate">
+          <label for="Password">CONTRASEÑA</label>
+          </div> -->
+        <div class="right"><br>
+              <button [disabled]="!fgCreacion.valid" type="submit" class="waves-effect waves-light btn">Registrar</button>
+        </div><br>
+        <div class="" style="font-size:12px;">
+          <div class="g-recaptcha" data-sitekey="6LdDin4dAAAAAL4AMdvJVir0cGdD8StT5Tqmn7WM"></div>
+        </div>
+    
+      </div>
+    </form>
+  </form>            
