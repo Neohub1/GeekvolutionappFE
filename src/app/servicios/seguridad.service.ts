@@ -61,9 +61,21 @@ export class SeguridadService {
       return null;
     }
   }
-EliminarSesion(){
-  this.RefrescarDatosSesion(new ModeloIdentificar());
-  localStorage.removeItem("datosSesion");
-}
+
+  ObtenerToken(){
+    let datosString= localStorage.getItem("datosSesion");
+    if(datosString){
+      let datos= JSON.parse(datosString);
+      return datos.tk;
+    }else{
+      return "";
+    }
+  }
+
+
+  EliminarSesion(){
+    this.RefrescarDatosSesion(new ModeloIdentificar());
+    localStorage.removeItem("datosSesion");
+  }
 
 }

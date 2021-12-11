@@ -39,6 +39,15 @@
         </div>
         <br><br>
         -->
+        <br>
+        <form [formGroup]="fgValidador">
+            <ngx-recaptcha2 #captchaElem
+              siteKey="6LcJ85MdAAAAAG8ctwWx7R1kNLaAf1rTO8KtNLYb"
+              theme="dark"
+              formControlName="captcha">
+            </ngx-recaptcha2>
+          </form>
+        <br>
             <!-- Form Button Section  -->
 
         <div class="center">

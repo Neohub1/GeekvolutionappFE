@@ -12,13 +12,18 @@ import { SeguridadService } from 'src/app/servicios/seguridad.service';
 export class IdentificacionComponent implements OnInit {
 
 
+sitekey:string="";
+
   fgValidador: FormGroup = this.fb.group({
     'usuario':['',[Validators.required, Validators.email]],
-    'clave': ['',[Validators.required]]
+    'clave': ['',[Validators.required]],
+    'captcha':['',[Validators.required]]          
   })
   constructor(private fb: FormBuilder,
     private servicioSeguridad: SeguridadService,
-    private router: Router) { }
+    private router: Router) {
+      this.sitekey="6LcJ85MdAAAAAG8ctwWx7R1kNLaAf1rTO8KtNLYb";
+     }
 
   ngOnInit(): void {
     

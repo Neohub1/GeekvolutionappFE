@@ -22,12 +22,12 @@ export class CrearPersonaComponent implements OnInit {
   }
 
   CrearUsuario(){
-    let nombre= this.fgCreacion.controls['nombre'];
-    let apellidos= this.fgCreacion.controls['apellidos'];
-    let correo= this.fgCreacion.controls['correo'];
-    let celular= this.fgCreacion.controls['celular'];
+    let nombre= this.fgCreacion.controls['nombre'].value;
+    let apellidos= this.fgCreacion.controls['apellidos'].value;
+    let correo= this.fgCreacion.controls['correo'].value;
+    let celular= this.fgCreacion.controls['celular'].value;
 
-    //this.servicioAdministracion.Creacion(nombre, apellidos,correo,celular)
+    this.servicioAdministracion.Creacion(nombre, apellidos,correo,celular)
   }
 
 }

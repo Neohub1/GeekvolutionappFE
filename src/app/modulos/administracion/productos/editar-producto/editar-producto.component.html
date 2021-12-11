@@ -1,1 +1,68 @@
-<p>editar-producto works!</p>
+<form [formGroup]="fgValidador" > <!-- Change The Form Method From Here-->
+    <div class="card-panel z-depth-5">
+
+        <!-- Form Logo Section  -->
+        <input type="hidden" formControlName="id"/>
+        <div class="row margin">
+            <div class="col s12 m12 l12 center">
+                <img src="https://i.imgur.com/ypAbAYt.png"
+                 alt="" class="responsive-img circle" style="width:100px;">
+                <p>Edición de Productos GeekvolutionShop</p>
+            </div>
+        </div>
+
+        <!-- Form Username Input Section -->
+
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <i class="material-icons prefix">important_devices</i>
+                <input formControlName='nombre'type="text" name="username" id="username">
+                <label class="active" for="username">Ingresar nombre del producto</label>
+            </div>
+        </div>
+
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <i class="material-icons prefix">monetization_on</i>
+                <input formControlName='precio'type="text" name="precio" id="precio">
+                <label class="active" for="precio">Ingresar precio del producto</label>
+            </div>
+        </div>
+
+      
+        <!-- Form Password Input Section -->
+
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <i class="material-icons prefix">photo</i>
+                <input formControlName='imagen'type="text" name="imagen" id="imagen">
+                <label class="active" for="imagen">Ingresar imagen del producto</label>
+            </div>
+        </div>
+
+            <!-- Form Chekbox (Remember Me) Input Section -->
+        <!--
+        <div class="left">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox">Remember Me</label>
+        </div>
+        <br><br>
+        -->
+            <!-- Form Button Section  -->
+
+        <div class="center">
+            <input (click)="EditarProducto()" [disabled]= "!fgValidador.valid" type="submit" value="Editar Producto" name="login" 
+            class="btn waves-effect waves-light " 
+            style="width:100%; background-color: #ff4081;">
+        </div>
+
+            <!-- Form "Register Now" And "Forgot Password" Link Section. 
+
+        <div class="" style="font-size:14px;"><br>
+            <a routerLink="/administracion/crear-producto" class="left">Register Now!</a>
+            <a href="" class="right ">Forgot Password?</a>
+        </div><br>  -->
+        
+    </div>
+</form>
+
