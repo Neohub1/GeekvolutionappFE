@@ -58,7 +58,7 @@ export class EditarProductoComponent implements OnInit {
     this.servicioProducto.EditarProducto(p).subscribe((datos:ModeloProducto)=>{
       alert ("El producto ha sido editado");
       this.router.navigate(["/administracion/buscar-producto"]);
-    }, (error:any)=>{
+    },(error:any)=>{
       alert("Error en la edición del producto");
     })
   }

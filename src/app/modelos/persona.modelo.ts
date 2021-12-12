@@ -1,6 +1,6 @@
 export class ModeloPersona{
     id?: string;
-    nombre?:string;
+    nombres?:string;
     apellidos?:string;
     correo?: string;
     celular?: string;

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModeloPersona } from 'src/app/modelos/persona.modelo';
+import { PersonaService } from 'src/app/servicios/persona.service';
 
 @Component({
   selector: 'app-buscar-persona',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscarPersonaComponent implements OnInit {
 
-  constructor() { }
+  ListaPersonas:ModeloPersona[]=[];
+
+  constructor(private servicioPersona:PersonaService ) { }
 
   ngOnInit(): void {
+
+    this.ObtenerPersonas();
+  }
+
+  ObtenerPersonas(){
+    this.servicioPersona.ConsultarPersona().subscribe((datos:ModeloPersona[])=>{
+      this.ListaPersonas=datos;
+    })
   }
 
 }
