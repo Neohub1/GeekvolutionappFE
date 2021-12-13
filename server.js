@@ -9,5 +9,5 @@ app.get('/*',(req, res)=>
 );
 
 
-app.isten(process.env.PORT || 4200);
+app.listen(process.env.PORT || 4200);
 
