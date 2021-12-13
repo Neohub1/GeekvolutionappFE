@@ -38,8 +38,7 @@ const routes: Routes = [
 
   {
     path:"seguridad",
-    loadChildren:()=> import("./modulos/seguridad/seguridad.module").then(x=>x.SeguridadModule),
-    canActivate:[ValidadorSesionGuard]
+    loadChildren:()=> import("./modulos/seguridad/seguridad.module").then(x=>x.SeguridadModule)
   },
   {
     path: "",
